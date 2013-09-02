@@ -38,6 +38,9 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-# group :development do
-#  gem 'erb2haml'
-# end
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+  gem 'factory_girl'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner', '1.0.1'
+end
