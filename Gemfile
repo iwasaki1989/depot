@@ -46,3 +46,4 @@ group :development, :test do
 end
 
 gem 'jquery-ui-rails'
+gem 'will_paginate', '~> 3.0'

@@ -13,7 +13,7 @@
     #columns
       #side
         #cart
-          - if @carts
+          - if @cart
             = hidden_div_if(@cart.line_items.empty?, id: 'cart') do
               = render @cart
 
