@@ -12,6 +12,11 @@
 
     #columns
       #side
+        #cart
+          - if @carts
+            = hidden_div_if(@cart.line_items.empty?, id: 'cart') do
+              = render @cart
+
         %ul
           %li
             %a{:href => "http://www...."} ホーム
@@ -23,3 +28,9 @@
             %a{:href => "http://www..../contact"} お問い合わせ
       #main
         = yield
+
+-#      = hidden_div_if(@cart.line_items.empty?, id: 'cart') do
+        = render @cart
+
+-#      %div{:id => "cart", :style => @cart.line_items.empty? ? "display: none" : ""}
+        = render(@cart)

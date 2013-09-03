@@ -1,17 +1,4 @@
 - if notice
   %p#notice= notice
 
-.cart_title
-  カート
-%table
-  - @cart.line_items.each do |item|
-    %tr
-      %td #{item.quantity} &times;
-      %td= item.product.title
-      %td.item_price= number_to_currency(item.total_price)
-
-  %tr.total_line
-    %td{:colspan => 2}合計
-    %td.total_cell= number_to_currency(@cart.total_price)
-
-= button_to 'カートを空にする', @cart, method: :delete, confirm: '本当によいですか？'
+= render @cart

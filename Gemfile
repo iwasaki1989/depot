@@ -44,3 +44,5 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner', '1.0.1'
 end
+
+gem 'jquery-ui-rails'
