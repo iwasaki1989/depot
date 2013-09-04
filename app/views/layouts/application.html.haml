@@ -26,6 +26,17 @@
             %a{:href => "http://www..../news"} ニュース
           %li
             %a{:href => "http://www..../contact"} お問い合わせ
+
+        - if session[:user_id]
+          %ul
+            %li
+              = link_to '注文', orders_path
+            %li
+              = link_to '商品', products_path
+            %li
+              = link_to 'ユーザ', users_path
+
+          = button_to 'ログアウト', logout_path, method: :delete
       #main
         = yield
 
